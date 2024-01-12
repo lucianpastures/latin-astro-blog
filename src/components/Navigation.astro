@@ -1,5 +1,19 @@
 ---
+const links = [
+    {
+        label: "Home",
+        url: "/",
+    },
+    {
+        label: "About",
+        url: "/about",
+    },
+    {
+        label: "Blog",
+        url: "/blog",
+    },
+];
 ---
-<a href="/">Home</a>
-<a href="/about/">About</a>
-<a href="/blog/">Blog</a>
+<div class="nav-links">
+    {links.map(link => <a href={link.url}>{link.label}</a>)}
+</div>
