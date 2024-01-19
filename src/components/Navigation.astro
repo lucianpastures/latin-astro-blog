@@ -19,6 +19,17 @@ const links = [
 ];
 ---
 
-<div class="nav-links">
-  {links.map((link) => <a href={link.url}>{link.label}</a>)}
-</div>
+<ul class="flex gap-8">
+  {
+    links.map((link) => (
+      <li>
+        <a
+          class="text-lg text-sky-800 dark:text-sky-100 hover:text-orange-500 dark:hover:text-orange-300"
+          href={link.url}
+        >
+          {link.label}
+        </a>
+      </li>
+    ))
+  }
+</ul>

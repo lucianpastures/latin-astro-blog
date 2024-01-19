@@ -23,7 +23,7 @@
     background: none;
   }
   .sun {
-    fill: black;
+    fill: hsl(31, 84%, 54%);
   }
   .moon {
     fill: transparent;
@@ -66,4 +66,12 @@
   document
     .getElementById("themeToggle")
     .addEventListener("click", handleToggleClick);
+
+  document.addEventListener("astro:after-swap", () => {
+    if (theme === "light") {
+      document.documentElement.classList.remove("dark");
+    } else {
+      document.documentElement.classList.add("dark");
+    }
+  });
 </script>

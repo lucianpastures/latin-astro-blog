@@ -5,17 +5,19 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-  <p class="my-2 text-md">
+  <p class="my-2 text-md dark:text-slate-300">
     {frontmatter.pubDate.slice(0, 10)} - Written by: {frontmatter.author}
   </p>
-  <div class="bg-indigo-300 shadow-lg rounded-md">
+  <div class="bg-indigo-300 shadow-lg rounded-md max-w-2xl">
     <img
       src={frontmatter.image.url}
       class="object-cover w-full rounded-md"
       alt={frontmatter.image.alt}
     />
   </div>
-  <p class="mt-2"><em>{frontmatter.description}</em></p>
+  <p class="mt-2 dark:text-slate-300 lg:text-lg italic">
+    {frontmatter.description}
+  </p>
   <div class="flex flex-wrap mb-8 mt-4">
     {
       frontmatter.tags.map((tag) => (
@@ -28,7 +30,7 @@ const { frontmatter } = Astro.props;
     }
   </div>
 
-  <article class="prose lg:prose-xl dark:prose-invert">
+  <article class="prose lg:prose-xl dark:prose-invert mt-4">
     <slot />
   </article>
 </BaseLayout>

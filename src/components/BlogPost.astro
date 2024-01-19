@@ -1,5 +1,14 @@
 ---
-const { url, title } = Astro.props;
+const { url, title, image, description, pubDate } = Astro.props;
 ---
 
-<li><a href={url}>{title}</a></li>
+<li
+  class="p-4 bg-sky-100 dark:bg-sky-300 hover:cursor-pointer hover:scale-105 duration-100 rounded-sm"
+>
+  <a href={url}>
+    <img src={image.url} class="object-cover w-90 rounded-md" alt={image.alt} />
+    <p class="text-lg font-bold mt-4">{title}</p>
+    <p class="text-md italic">{description}</p>
+    <p class="text-sm">Posted {pubDate.slice(0, 10)}</p>
+  </a>
+</li>

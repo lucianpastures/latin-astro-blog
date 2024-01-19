@@ -17,10 +17,12 @@ const { pageTitle } = Astro.props;
   </head>
   <body class="bg-sky-200 dark:bg-sky-900">
     <Header />
-    <h1 class="text-5xl font-bold text-sky-900 dark:text-sky-200">
-      {pageTitle}
-    </h1>
-    <slot />
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-5xl font-bold text-sky-900 dark:text-sky-200 mt-6">
+        {pageTitle}
+      </h1>
+      <slot />
+    </main>
     <Footer />
     <script>
       import "../scripts/menu.js";
