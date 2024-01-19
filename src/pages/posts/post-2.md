@@ -4,10 +4,10 @@ title: 5. Ignis
 author: Philoponus
 description: "series of Latin texts by Comenius on Fire"
 image:
-  url: "https://docs.astro.build/assets/arc.webp"
+  url: "https://images.fineartamerica.com/images-medium-large-5/3-great-fire-of-london-1666-granger.jpg"
   alt: "Thumbnail of Astro arcs."
 pubDate: 2022-07-08
-tags: ["comenius", "5. Ignis"]
+tags: ["comenius", "V Ignis"]
 ---
 
 ## Orbis Pictus
